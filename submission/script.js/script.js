@@ -23,7 +23,6 @@ function initWishlist() {
     const addButton = document.getElementById('add-to-wishlist');
     if (!wishlist || !input || !addButton) return;
 
-    //Wishlist loaded from localStorage
     const savedWishlist = JSON.parse(localStorage.getItem('wishlist') || '[]');
     savedWishlist.forEach(item => addWishlistItem(item, false));
 
@@ -91,10 +90,10 @@ function initThemeToggle() {
     if (currentTheme === 'dark') {
         document.documentElement.setAttribute('data-theme', 'dark');
         toggleButton.textContent = '☀️';
-    }else {
+    } else {
         document.documentElement.removeAttribute('data-theme');
         toggleButton.textContent = '🌙';
-    } 
+    }
     toggleButton.addEventListener('click', () => {
         const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
         if (isDark) {
@@ -106,16 +105,14 @@ function initThemeToggle() {
             localStorage.setItem('theme', 'dark');
             toggleButton.textContent = '☀️';
         }
-    });  
+    });
 }
 function initBannerReveal() {
-    const banner = document.getElementById('banner');
+    const banner = document.getElementById('banner-reveal');
     if (!banner) return;
 
-    banner.classList.remove('reveal');
-   
     banner.addEventListener('click', () => {
-        banner.classList.toggle('reveal');
+        banner.classList.toggle('revealed');
     });
 }
 document.addEventListener('DOMContentLoaded', () => {
