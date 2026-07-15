@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://plantainboss.co.ke/sitemap.xml
