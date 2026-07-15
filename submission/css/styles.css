@@ -751,21 +751,55 @@ footer p:last-child {
 /* ================================================================
    RESPONSIVE
    ================================================================ */
+html, body { overflow-x: hidden; }
+
 @media (max-width: 768px) {
-  nav { flex-direction: column; align-items: flex-start; }
-  nav ul { gap: 1rem; flex-wrap: wrap; }
+  nav { flex-direction: column; align-items: flex-start; gap: 0.8rem; padding: 0.75rem 1.1rem; }
+  nav ul { gap: 1rem; flex-wrap: wrap; row-gap: 0.6rem; }
+  nav ul li a { font-size: 0.78rem; }
+  .social-links { flex-wrap: wrap; gap: 0.8rem; }
 
+  main { padding: 1.5rem 6% 3rem; }
+  section > h2 { font-size: clamp(1.4rem, 6vw, 2rem); margin-bottom: 1.4rem; }
 
-  article { grid-template-columns: 1fr; }
+  article { grid-template-columns: 1fr; padding: 1.5rem; }
   article img { height: 200px !important; }
 
+  #gallery { gap: 1.2rem; }
+
+  #contact { padding: 0.5rem 0 2rem; }
   #contact form { padding: 1.8rem 1.2rem; }
+
+  footer { padding: 2.5rem 6% 1.5rem; }
 }
 
+@media (max-width: 600px) {
+  .logo { width: 46px !important; height: 46px !important; }
+  nav ul { gap: 0.9rem; }
+  nav ul li a { font-size: 0.72rem; letter-spacing: 0.08em; }
+  .social-links a { font-size: 1.1rem; }
+
+  header h2 { font-size: 0.75rem; letter-spacing: 0.24em; margin-top: 1.8rem; }
+  header > p, header p[style] { font-size: 0.9rem; }
+
+  article { padding: 1.2rem; }
+  article h4 { font-size: 1.05rem; }
+  article p { font-size: 0.92rem; line-height: 1.7; }
+
+  #contact button[type="submit"], #contact input[type="reset"] {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0.6rem 0 0;
+  }
+}
 
 @media (max-width: 480px) {
-  header h1 { font-size: 1.8rem; }
-  article { padding: 1.2rem; }
+  header h1 { font-size: 1.7rem; }
+  header::after { height: 44px; }
+  article { padding: 1.1rem; }
+  section > h2::after { margin-top: 0.4rem; }
+  footer p { font-size: 0.85rem; line-height: 1.9; }
 }
 
 header {
