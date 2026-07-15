@@ -145,6 +145,10 @@
       @media (max-width:700px){
         .guide-quickfacts{ grid-template-columns:1fr; }
         .guide-grid{ grid-template-columns:1fr; }
+        .guide-stage{ grid-template-columns:36px 1fr; gap:0 0.8rem; }
+        .guide-stage-dot{ width:28px; height:28px; font-size:0.8rem; }
+        .guide-table{ font-size:0.8rem; }
+        .guide-table th, .guide-table td{ padding:0.5rem 0.55rem; }
       }
     </style>
 </head>
@@ -287,6 +291,7 @@
         <section id="guide-pests">
             <h2>Common Pests &amp; Diseases</h2>
             <hr>
+            <div style="overflow-x:auto;">
             <table class="guide-table">
                 <tr><th>Problem</th><th>Signs</th><th>Management</th></tr>
                 <tr><td>Banana weevil</td><td>Bores into the pseudostem, weakening the plant</td><td>Use clean planting material; apply recommended insecticide</td></tr>
@@ -295,6 +300,7 @@
                 <tr><td>Sigatoka leaf spot</td><td>Black streaks across the leaves</td><td>Fungicide and regular leaf sanitation</td></tr>
                 <tr><td>Bacterial wilt</td><td>Rotting roots</td><td>Well-drained soil; avoid over-watering; bactericides if needed</td></tr>
             </table>
+            </div>
         </section>
 
         </div>
